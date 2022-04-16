@@ -202,10 +202,6 @@ public class Classloader extends Task {
                     parent = this.getClass().getClassLoader();
                 }
 
-                if (name == null) {
-                    // The core loader must be reverse
-                    //reverse=true;
-                }
                 getProject().log("Setting parent loader " + name + " "
                     + parent + " " + parentFirst, Project.MSG_DEBUG);
 
