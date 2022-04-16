@@ -155,6 +155,7 @@ public class Execute {
      * @return a map containing the environment variables.
      * @since Ant 1.8.2
      */
+    // TODO: Remove empty if
     public static synchronized Map/*<String,String>*/ getEnvironmentVariables() {
         if (procEnvironment != null) {
             return procEnvironment;
