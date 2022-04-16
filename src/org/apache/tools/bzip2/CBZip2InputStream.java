@@ -766,6 +766,7 @@ public class CBZip2InputStream extends InputStream implements BZip2Constants {
         return dataShadow.perm[zt][zvec - dataShadow.base[zt][zn]];
     }
 
+
     private void setupBlock() throws IOException {
         if (this.data == null) {
             return;
