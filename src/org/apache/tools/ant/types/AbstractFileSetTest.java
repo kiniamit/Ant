@@ -51,12 +51,12 @@ public abstract class AbstractFileSetTest extends TestCase {
         return project;
     }
 
-    // TODO: Remove duplicate literal
     public final void testEmptyElementIfIsReference() {
         AbstractFileSet f = getInstance();
         f.setIncludes("**/*.java");
+        String dummyref = "dummyref";
         try {
-            f.setRefid(new Reference(getProject(), "dummyref"));
+            f.setRefid(new Reference(getProject(), dummyref));
             fail("Can add reference to "
                  + f.getDataTypeName()
                  + " with elements from setIncludes");
@@ -68,7 +68,7 @@ public abstract class AbstractFileSetTest extends TestCase {
         f = getInstance();
         f.createPatternSet();
         try {
-            f.setRefid(new Reference(getProject(), "dummyref"));
+            f.setRefid(new Reference(getProject(), dummyref));
             fail("Can add reference to "
                  + f.getDataTypeName()
                  + " with nested patternset element.");
@@ -80,7 +80,7 @@ public abstract class AbstractFileSetTest extends TestCase {
         f = getInstance();
         f.createInclude();
         try {
-            f.setRefid(new Reference(getProject(), "dummyref"));
+            f.setRefid(new Reference(getProject(), dummyref));
             fail("Can add reference to "
                  + f.getDataTypeName()
                  + " with nested include element.");
@@ -90,7 +90,7 @@ public abstract class AbstractFileSetTest extends TestCase {
         }
 
         f = getInstance();
-        f.setRefid(new Reference(getProject(), "dummyref"));
+        f.setRefid(new Reference(getProject(), dummyref));
         try {
             f.setIncludes("**/*.java");
             fail("Can set includes in "
