@@ -476,6 +476,7 @@ public abstract class AbstractCvsTask extends Task {
      * @param root
      *            the CVSROOT variable
      */
+    //  TODO: Remove collapsable ifs
     public void setCvsRoot(String root) {
 
         // Check if not real cvsroot => set it to null
