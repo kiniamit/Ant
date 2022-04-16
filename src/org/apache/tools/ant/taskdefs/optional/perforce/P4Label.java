@@ -78,7 +78,6 @@ public class P4Label extends P4Base {
      * do the work
      * @throws BuildException if failonerror has been set to true and Perforce fails
      */
-    // TODO: Remove Unconditional if
     public void execute() throws BuildException {
         log("P4Label exec:", Project.MSG_INFO);
 
@@ -151,9 +150,7 @@ public class P4Label extends P4Base {
                 public void process(String line) {
                     log(line, Project.MSG_VERBOSE);
 
-                    if (true) {
                         line = "Options: " + lock;
-                    }
 
                     labelSpec.append(line + "\n");
                 }
