@@ -474,7 +474,6 @@ public class Checksum extends MatchingTask implements Condition {
     /**
      * Generate checksum(s) using the message digest created earlier.
      */
-    // TODO: Remove empty while
     private boolean generateChecksums() throws BuildException {
         boolean checksumMatches = true;
         FileInputStream fis = null;
@@ -490,9 +489,7 @@ public class Checksum extends MatchingTask implements Condition {
                 fis = new FileInputStream(src);
                 DigestInputStream dis = new DigestInputStream(fis,
                                                               messageDigest);
-                while (dis.read(buf, 0, readBufferSize) != -1) {
-                    // Empty statement
-                }
+
                 dis.close();
                 fis.close();
                 fis = null;
