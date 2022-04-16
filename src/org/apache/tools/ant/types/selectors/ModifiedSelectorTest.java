@@ -620,7 +620,7 @@ public class ModifiedSelectorTest extends BaseSelectorTest {
      *
      * @param algo   configured test object
      */
-    
+
     protected void doTest(Comparator comp) {
         String o1 = "string1";
         String o2 = "string2";
