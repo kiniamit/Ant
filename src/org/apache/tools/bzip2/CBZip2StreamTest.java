@@ -25,6 +25,7 @@ import junit.framework.TestCase;
 
 public class CBZip2StreamTest extends TestCase {
 
+    // TODO: Remove unused local variable
     public void testNullPointer() throws IOException {
         try {
             CBZip2InputStream cb = new CBZip2InputStream(new ByteArrayInputStream(new byte[0]));
