@@ -51,6 +51,7 @@ public abstract class AbstractFileSetTest extends TestCase {
         return project;
     }
 
+    // TODO: Remove duplicate literal
     public final void testEmptyElementIfIsReference() {
         AbstractFileSet f = getInstance();
         f.setIncludes("**/*.java");
