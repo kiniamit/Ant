@@ -474,6 +474,7 @@ public class Checksum extends MatchingTask implements Condition {
     /**
      * Generate checksum(s) using the message digest created earlier.
      */
+    // TODO: Remove empty while
     private boolean generateChecksums() throws BuildException {
         boolean checksumMatches = true;
         FileInputStream fis = null;
